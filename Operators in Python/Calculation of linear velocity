@@ -1,0 +1,7 @@
+w = 10
+x = 0.5
+y = 1
+z = 3
+print("the linear velocity at distance",x,"meters from center is",w*x,"meter per sec.")
+print("the linear velocity at distance",y,"meters from center is",w*y,"meter per sec.")
+print("the linear velocity at distance",z,"meters from center is",w*z,"meter per sec.")
