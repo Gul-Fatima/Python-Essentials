@@ -1,0 +1,15 @@
+def many(phrase,start_limit,end_limit):
+    test = phrase[start_limit:end_limit]
+    return test
+
+
+phrase = str(input("Enter the phrase :"))
+#for user"s input for start and end indexing
+start_limit= int(input("Enter the starting limit : "))
+end_limit = int(input("Enter the ending limit : "))
+print("The required character of indexing ",start_limit,":",end_limit, "will be : ",many(phrase, start_limit, end_limit))
+#given sample testing:
+print("Words of length 1 : 2 is ",many(phrase, 1, 2))
+print("Words of length 2 : 5 is ",many(phrase, 2, 5))
+print("Words of length 3 : 6 is ",many(phrase, 3, 6))
+print("Words of length 4 : 8 is ",many(phrase, 4 ,8))
