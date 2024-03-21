@@ -1,0 +1,4 @@
+l =float(input("Enter the length of the rectangle :"))
+b = float(input("Enter the breadth of rectangle :"))
+print("The area of rectangle having length :",l,"and breadth :",b,"is",l*b,"square units") 
+
