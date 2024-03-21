@@ -1,0 +1,8 @@
+#PROGRAM TO DETERMINE THE NATURE OF NUMBER
+x = float(input("Enter the value : "))
+if x<0:
+    print("The given value",x, "is negative.")
+elif x==0:
+    print("The given value",x, "is zero.")
+else:
+    print("The given value",x, "is positive.")    
