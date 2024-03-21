@@ -1,0 +1,10 @@
+ #CALCULATOR
+
+x = int(input("Enter the first value : "))
+y = int(input("Enter the second value : "))
+print(int(x))
+print(int(y))
+print("The sum of", x ,"and", y, "is : ", x+y)
+print("The difference of", x ,"and", y, "is : ", x-y)
+print("The product of", x ,"and", y, "is : ", x*y)
+print("The remainder of", x ,"and", y, "is : ", x/y)
