@@ -1,0 +1,55 @@
+def input_subjects():
+    subjects = []
+    for _ in range(5):
+        subject = input("Enter the subject name: ")
+        subjects.append(subject)
+    return subjects
+
+def input_marks(subjects):
+    marks = {}
+    for subject in subjects:
+        marks[subject] = int(input(f"Enter marks obtained in {subject}: "))
+    return marks
+
+def calculate_percentage(total_marks):
+    total = sum(total_marks.values())
+    percentage = (total / (len(total_marks) * 100)) * 100
+    return percentage
+
+def calculate_grade(percentage):
+    if percentage >= 90:
+        return 'A'
+    elif 80 <= percentage < 90:
+        return 'B'
+    elif 70 <= percentage < 80:
+        return 'C'
+    elif 60 <= percentage < 70:
+        return 'D'
+    else:
+        return 'F'
+
+def display_result(name, father_name, roll_no, subjects, marks):
+    print("Student Details:")
+    print("Name:", name)
+    print("Father's Name:", father_name)
+    print("Roll Number:", roll_no)
+    print("\nSubject-wise Marks:")
+    for subject, mark in marks.items():
+        print(subject + ":", mark)
+    print("\nTotal Marks:", sum(marks.values()))
+    percentage = calculate_percentage(marks)
+    print("Percentage:", percentage, "%")
+    grade = calculate_grade(percentage)
+    print("Grade:", grade)
+
+def main():
+    name = input("Enter your name: ")
+    father_name = input("Enter your father's name: ")
+    roll_no = int(input("Enter your roll number: "))
+    print("Enter the details of 5 subjects:")
+    subjects = input_subjects()
+    marks = input_marks(subjects)
+    display_result(name, father_name, roll_no, subjects, marks)
+
+if __name__ == "__main__":
+    main()
