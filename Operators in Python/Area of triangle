@@ -1,0 +1,4 @@
+#TO FIND THE AREA OF TRIANGLE
+length = float(input("Enter the length of triangle : "))
+breadth = float(input("Enter the breadth of triangle : "))
+print("The area of triangle having length equals to ",length,"and breadth equals to ",breadth,"is",float(0.5*length*breadth),"square units")
