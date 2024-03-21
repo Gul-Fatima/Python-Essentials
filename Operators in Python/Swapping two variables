@@ -1,0 +1,9 @@
+# TO SWAP THE VALUE OF TWO VARIABLE(i.e. change the values of given variable)
+x = int(input("Enter the value of first variable : "))
+y = int(input("Enter the value of second variable : "))
+print("The given value of x is",int(x))
+print("The given value of y is : ",int(y))
+print("AFTER SWAPPING THE VALUE OF TWO VARIABLES")
+x,y = y,x
+print("The value of x will be : ",int(x))
+print("The value of y will be : ",int(y)) 
