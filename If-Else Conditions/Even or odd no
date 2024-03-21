@@ -1,0 +1,6 @@
+#PROGRAM TO DETERMINE THE NUMBER IS ODD OR EVEN
+x = int(input("Enter the value : "))
+if x%2==0:
+    print("The given value",x, "is even.")
+else :
+    print("The given value",x, "is odd.") 
