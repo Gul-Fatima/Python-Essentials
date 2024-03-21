@@ -1,0 +1,4 @@
+#CALCULATING SQUARE ROOT OF A NUMBER
+x = float(input("Enter the value : "))
+y = float(0.5)
+print("THE SQUARE ROOT OF THE GIVEN VALUE IS : ",float(x**y))
