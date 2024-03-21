@@ -1,0 +1,14 @@
+calories = float(input("Enter the calories in food : "))
+fat_gram = float(input("Enter the fat gram in food : "))
+fat_calories = fat_gram*9
+percentage = ((fat_calories / calories) * 100)
+if calories <= 0 or fat_gram <= 0:
+    print("The quantity of either calories or fat gram is entered wrong.")
+elif fat_calories > calories:
+       print("The quantity of either calories or fat gram is incorrectly entered.")
+elif percentage < 30:
+         print("The percentage of calories from fat is :",percentage)
+         print("The food is low in calories.")
+else:
+print("The percentage of calories from fat is :",percentage) 
+
