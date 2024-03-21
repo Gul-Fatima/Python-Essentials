@@ -1,0 +1,38 @@
+type_o = str(input("What coffee you would like to have, if black enter b, if white enter w :"))
+type = type_o.capitalize()
+size_o = str(input('Would you like double cup size : Y \ N '))
+size = size_o.capitalize()
+way_o = str(input("Dear customer,would you like to prepare your coffee manually,if yes enter m : "))
+way = way_o.capitalize()
+# time for single cup size,white coffee
+t_w = [15, 15, 20, 2, 4, 20]
+# time for single cup size,black coffee
+t_b = [20, 20, 25, 15, 0, 25]
+# time for double cup size,white coffee
+tempdw = []
+for i in range(len(t_w)):
+    t_wd = (t_w[i] + ((int(t_w[i]) / 100) * 50))
+    tempdw.append(t_wd)
+# time for double cup size,black coffee
+tempdb = []
+for i in range(len(t_b)):
+    t_bd = float(t_b[i] + ((int(t_b[i]) / 100) * 50))
+    tempdb.append(t_bd)
+
+operations = ["Put water  ", "Sugar      ", "Mix well   ", "Add coffee ", "Add milk   ", "Mix well   "]
+print("OPERATION  ", 2 * " ", "TIME")
+for k in range(len(operations)):
+    # table for black,single cup size,manual coffee :
+    if type == "B" and size == "N" and way == "M":
+        print(operations[k], 2 * " ", t_b[k])
+    # table for white,single cup size,manual coffee :
+    elif type == "W" and size == "N" and way == "M":
+        print(operations[k], 2 * " ", t_w[k])
+    # table for black,double cup size,manual coffee :
+    elif type == "B" and size == "Y" and way == "M":
+        print(operations[k], 2 * " ", tempdb[k])
+    # table for white,double cup size,manual coffee :
+    elif type == "W" and size == "Y" and way == "M":
+        print(operations[k], 2 * " ", tempdw[k])
+    else:
+        print("Invalid Input")
