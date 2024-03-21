@@ -1,0 +1,3 @@
+#PROGRAM TO CONVERT KM INTO MILES
+x = float(input("Enter the value of distance in km : "))
+print("The given ", x ,"km distance is equal to ",float(0.621*x),"miles.") 
