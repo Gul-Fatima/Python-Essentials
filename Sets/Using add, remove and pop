@@ -1,0 +1,28 @@
+ # Q1
+
+s1 = set ()
+for i in range(5):
+    name = input("Enter the students name:")
+    s1.add(name)
+print(s1)
+
+# q2
+students = {"sara","sana","ayesha","ali","abraham"}
+left_students = set()
+for i in range(2):
+    name = input("Enter the name of left students:")
+    left_students.add(name)
+for i in left_students:
+    if i in students:
+       students.remove(i)
+print(students)
+
+# Q3
+dishes = set()
+for i in range(3):
+    dish_name = input("Enter your favorite dish:")
+    dishes.add(dish_name)
+print(dishes)
+for i in range(len(dishes)):
+    dishes.pop()
+    print(dishes)
