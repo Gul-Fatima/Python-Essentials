@@ -1,0 +1,5 @@
+first_term = int(input("enter the first term: "))
+common_difference = int(input("enter the common difference: "))
+n = int(input("Enter the no of term required :"))
+Tn =  first_term + ((n-1)*common_difference)
+print("The",n,"term will be :",Tn)
