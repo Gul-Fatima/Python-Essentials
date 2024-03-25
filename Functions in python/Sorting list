@@ -1,0 +1,12 @@
+def sort(n):
+    size = len(n)
+    for j in range(0, size):
+        for i in range(0, size - 1):
+            if n[i] > n[i + 1]:
+                temp = n[i]
+                n[i] = n[i + 1]
+                n[i + 1] = temp
+    return n
+
+l = [2, 5, 8, 7, 3]
+print(sort(l))
