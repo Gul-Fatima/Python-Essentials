@@ -1,0 +1,8 @@
+def hexASCII():
+    # Iterate over lowercase alphabet characters
+    for char in range(ord('a'), ord('z') + 1):
+        # Convert ASCII code to hexadecimal without '0x' prefix and print the correspondence
+        print(f"{chr(char)}: {hex(char)[2:]}")
+
+# Call the function to print the correspondence
+hexASCII()
