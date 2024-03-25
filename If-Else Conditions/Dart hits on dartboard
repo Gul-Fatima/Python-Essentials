@@ -1,0 +1,16 @@
+# Coordinates of darts
+coordinates = [(0, 0), (10, 10), (6, 6), (7, 8)]
+
+# Radius of the dartboard
+db_radius = 10
+
+# Checking if the dart is within the dartboard for each set of coordinates
+for x, y in coordinates:
+    # Calculating distance from the center using distance formula
+    distance = (x ** 2 + y ** 2) ** 0.5
+    
+    # Checking if the distance is less than or equal to the dartboard radius
+    if distance <= db_radius:
+        print(f"Dart at ({x}, {y}) is within the dartboard: True")
+    else:
+        print(f"Dart at ({x}, {y}) is within the dartboard: False")
