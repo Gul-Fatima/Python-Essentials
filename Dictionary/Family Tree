@@ -1,0 +1,29 @@
+family_tree_david = {
+    'David': {
+        'personal_info': {
+            'Name': 'David',
+            'Age': 30,
+            'DOB': 'January 1, 1994'
+        },
+        'parents': {
+            'Father': 'John',
+            'Mother': 'Emily'
+        },
+        'siblings': ['Michael', 'Sophie'],
+        'maternal_family': {
+            'GrandFather': 'George',
+            'GrandMother': 'Alice',
+            'uncles_aunts': ['Peter', 'Sarah'],
+            'cousins': ['Oliver', 'Emma']
+        },
+        'paternal_family': {
+            'GrandFather': 'William',
+            'GrandMother': 'Mary',
+            'uncles_aunts': ['Robert', 'Rachel'],
+            'cousins': ['Daniel', 'Charlotte']
+        }
+    }
+}
+
+# Now, family_tree_david represents the family tree for David
+print(family_tree_david)
