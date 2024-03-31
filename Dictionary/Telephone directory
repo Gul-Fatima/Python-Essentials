@@ -1,0 +1,39 @@
+phone_directory = {}
+
+def add_member(x):
+    no_of_contacts = int(input("How many contacts you want to save: "))
+    for i in range(no_of_contacts):
+        name = input("Enter the contacts name: ")
+        phone_number = int(input("Enter the contacts number: "))
+        phone_directory.update({name : phone_number })
+        print(name.title(),"is added to the phone directory.")
+
+a = input("To add the contacts type add:")
+if a == "add":
+    add_member("x")
+
+print(phone_directory)
+
+
+# Deleting a member
+def delete_member(y):
+    name = input("Enter the contacts name to be deleted: ")
+    if name not in phone_directory:
+        print("Contact not found")
+    else:
+        phone_directory.pop(name)
+
+b = input("To delete the contacts type del: ")
+if b == "del":
+    delete_member("y")
+
+
+def print_directory(z):
+    print("Phone Directory:")
+    for name, phone_number in phone_directory.items():
+        print(name,":" ,phone_number)
+    print("Total members:", len(phone_directory))
+
+c = input("To print all contacts type print: ")
+if c == "print":
+    print_directory("z")
