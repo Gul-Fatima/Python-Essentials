@@ -1,0 +1,36 @@
+import pyodbc
+from tkinter import messagebox
+
+def display():
+    con = pyodbc.connect(r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
+                         r'DBQ=e:\pydb.accdb;')
+    cursor1 = con.cursor()
+
+    query = "SELECT * FROM emp;"
+
+    cursor1.execute(query)
+    rows = cursor1.fetchall()
+
+    for row in rows:
+        print(row)
+
+    con.close()
+
+
+def add(var1, var2, var3, var4):
+    con = pyodbc.connect(r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
+                         r'DBQ=e:\pydb.accdb;')
+    cursor1 = con.cursor()
+
+    query = f"INSERT INTO emp(empno, ename, address, deptid) VALUES (?, ?, ?, ?)"
+    cursor1.execute(query, (var1, var2, var3, var4))
+    con.commit()
+    con.close()
+
+    display()
+    messagebox.showinfo("Success", "One record has been added")
+
+
+# Call the add function with appropriate parameters
+# For example:
+# add("123", "John", "123 Street", "IT")
