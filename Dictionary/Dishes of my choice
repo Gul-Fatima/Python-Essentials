@@ -1,0 +1,31 @@
+# Dictionaries representing dishes of your choice
+choice_of_dishes = {
+    "Monday": "spaghetti",
+    "Tuesday": "Chicken Stir Fry",
+    "Wednesday": "Vegetarian Pizza",
+    "Thursday": "burger",
+    "Friday": "Beef Tacos",
+    "Saturday": "sushi",
+    "Sunday": "Roast Chicken"
+}
+
+# Dictionary of dishes cooked in a week
+week_dishes_dict = {
+    'Monday': 'spaghetti',
+    'Tuesday': 'sushi',
+    'Wednesday': 'burger',
+    'Thursday': 'lasagna',
+    'Friday': 'stir-fry',
+    'Saturday': 'burger',
+    'Sunday': 'sushi'
+}
+
+# Compare the dishes actually cooked with your preferred dishes
+for day, dish in week_dishes_dict.items():
+    if day in choice_of_dishes:
+        if dish == choice_of_dishes[day]:
+            print(f"On {day}, you got to enjoy your preferred dish: {dish}")
+        else:
+            print(f"On {day}, you had {dish}, but your preferred dish was {choice_of_dishes[day]}")
+    else:
+        print(f"No preference recorded for {day}, you had {dish}.")
